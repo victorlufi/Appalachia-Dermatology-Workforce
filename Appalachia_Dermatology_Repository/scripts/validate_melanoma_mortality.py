@@ -23,7 +23,7 @@ def main():
     print(f"Counties in workbook: {len(df)}")
     print(f"Mortality observed: {df['melanoma_mortality'].notna().sum()}")
     print(f"Complete cases: {len(complete)}")
-    print(f"99th percentile density cutoff (all counties): {threshold:.8f}")
+    print(f"99th percentile density cutoff (complete mortality cases): {threshold:.8f}")
     print(f"Filtered complete cases: {len(filtered)}")
     if len(filtered) < 3:
         raise ValueError("Insufficient complete cases")
