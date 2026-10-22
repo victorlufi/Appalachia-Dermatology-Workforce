@@ -19,6 +19,12 @@ Reproducibility materials for a county-level ecological dermatology workforce st
 - Appalachian Regional Commission county definitions and subregions: https://www.arc.gov/appalachian-counties-served-by-arc/ . **The original ARC classification spreadsheet is not included**; classification is preserved in master workbook.
 - NCI State Cancer Profiles: https://statecancerprofiles.cancer.gov/ (2018–2022 incidence/mortality extracts). Suppressed or unavailable rates are missing, not zero.
 
+## Melanoma mortality analysis
+
+The manuscript figure reports a 99th-percentile-filtered association between county dermatologist density and melanoma mortality (Pearson r approximately -0.24; p < 0.001). The workbook contains mortality rates for 582 of 3,235 counties; suppressed/unavailable values are treated as missing, not zero. The separately reported incidence correlation is exploratory and is not included in the manuscript.
+
+Run `python scripts/validate_melanoma_mortality.py` to recompute the mortality correlation from the frozen workbook. This script explicitly calculates the 99th-percentile density threshold across all counties, then uses complete mortality cases at or below that threshold. Verify that this threshold definition matches the original plotting notebook before asserting exact figure replication. The reported mortality result has previously been checked against the frozen workbook, but this newly committed script has not been executed through GitHub.
+
 ## Validation
 ```bash
 python -m pip install -r requirements.txt
@@ -36,9 +42,9 @@ This script processes NPPES in chunks, selects providers with taxonomy `207N0000
 - Verify original NPPES file release and reconcile any date reported in manuscript.
 - Verify the manuscript's figure and text RR/CI values agree.
 - Add original ARC classification input, or document an exact version/download.
-- Independently reproduce all melanoma analyses and figures before claiming complete reproducibility.
-- Check source dataset licenses and attribution requirements before making the repository public.
+- Independently regenerate the submitted mortality figure and confirm its exact percentile-filter definition before claiming figure-level reproducibility.
+- Confirm source dataset reuse terms and attribution requirements. This repository is already public.
 - A GitHub repository URL and Zenodo DOI can be added only **after** actual publication/archive; none is assigned in this ZIP.
 
 ## Citation
-Manuscript citation, GitHub URL, and Zenodo DOI: pending.
+GitHub: https://github.com/victorlufi/Appalachia-Dermatology-Workforce . Zenodo DOI: pending.
