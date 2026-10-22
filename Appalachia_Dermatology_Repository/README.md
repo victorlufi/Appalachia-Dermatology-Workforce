@@ -21,9 +21,9 @@ Reproducibility materials for a county-level ecological dermatology workforce st
 
 ## Melanoma mortality analysis
 
-The manuscript figure reports a 99th-percentile-filtered association between county dermatologist density and melanoma mortality (Pearson r approximately -0.24; p < 0.001). The workbook contains mortality rates for 582 of 3,235 counties; suppressed/unavailable values are treated as missing, not zero. The separately reported incidence correlation is exploratory and is not included in the manuscript.
+The manuscript figure reports a 99th-percentile-filtered association between county dermatologist density and melanoma mortality (Pearson r approximately -0.24; p < 0.001). The workbook contains 581 counties with usable paired dermatologist-density and melanoma-mortality values; suppressed/unavailable values are treated as missing, not zero. The separately reported incidence correlation is exploratory and is not included in the manuscript.
 
-Run `python scripts/validate_melanoma_mortality.py` to recompute the mortality correlation from the frozen workbook. This script explicitly calculates the 99th-percentile density threshold across all counties, then uses complete mortality cases at or below that threshold. Verify that this threshold definition matches the original plotting notebook before asserting exact figure replication. The reported mortality result has previously been checked against the frozen workbook, but this newly committed script has not been executed through GitHub.
+Run `python scripts/validate_melanoma_mortality.py` to recompute the mortality correlation from the frozen workbook. This script calculates the 99th-percentile dermatologist-density threshold among complete mortality/density cases, retaining 575 of 581 paired counties. Independently checked against the supplied workbook: Pearson r = -0.236519, p = 9.42e-09. The script has not been executed through GitHub Actions.
 
 ## Validation
 ```bash
