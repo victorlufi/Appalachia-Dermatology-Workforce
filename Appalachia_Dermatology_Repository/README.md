@@ -44,7 +44,7 @@ This script processes NPPES in chunks, selects providers with taxonomy `207N0000
 - Add original ARC classification input, or document an exact version/download.
 - Independently regenerate the submitted mortality figure and confirm its exact percentile-filter definition before claiming figure-level reproducibility.
 - Confirm source dataset reuse terms and attribution requirements. This repository is already public.
-- A GitHub repository URL and Zenodo DOI can be added only **after** actual publication/archive; none is assigned in this ZIP.
+- The research archive is publicly available on GitHub and Zenodo (release v1.0.1). The archived version is fixed; subsequent GitHub edits are not included in that archived release.
 
 ## Citation
-GitHub: https://github.com/victorlufi/Appalachia-Dermatology-Workforce . Zenodo DOI: pending.
+GitHub: https://github.com/victorlufi/Appalachia-Dermatology-Workforce . Archived release v1.0.1: https://doi.org/10.5281/zenodo.23576584 . All-versions concept DOI: https://doi.org/10.5281/zenodo.23576583 .
